@@ -3,7 +3,7 @@
 
 ### How to use?
 
-Run the [script.py]('./blob/main/script.py') file, then enter the asked file names and cordinate. The program is straight foroward to use.
+Run the [script.py]('https://github.com/s-shifat/rainfall_data_practice/blob/main/script.py') file, then enter the asked file names and cordinate. The program is straight foroward to use.
 
 ### What it does?
 
