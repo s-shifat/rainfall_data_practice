@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
+from sys import exit
 
 # constants
 RAINFALL_FILE = input('Rainfall File Name>> ') or './rainfall_2008.csv'
@@ -37,7 +38,6 @@ class RainExtractor:
 
     def query_file(self, file_name):
         df = pd.read_excel(file_name, index_col=None)
-        file_name = input('Query File Name>> ') or QUERY_FILE
         output_folder_path = os.path.join('.',RAINFALL_FILE.replace('.csv','')+'_results')
         try:
             os.mkdir(output_folder_path)
@@ -56,7 +56,8 @@ class RainExtractor:
             lon = float(input('lon>> '))
             self.query(lat, lon, save=True, interface=True)
         if choice == '2':
-            self.query_file()
+            file_name = input('Query File Name>> ') or QUERY_FILE
+            self.query_file(file_name)
         else:
             exit()
         print('-'*10)
